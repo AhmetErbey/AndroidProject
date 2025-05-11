@@ -3,6 +3,7 @@ package com.chatmate.kids;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import android.util.Log;
 
 public class GeminiApiService {
     private static final String API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
@@ -23,19 +24,27 @@ public class GeminiApiService {
             String jsonInputString = "{\n" +
                     "  \"contents\": [\n" +
                     "    {\n" +
+                    "      \"role\": \"user\",\n" +
                     "      \"parts\": [\n" +
-                    "        {\"text\": \"" + prompt + "\\nUser: " + userInput + "\"}\n" +
+                    "        {\"text\": \"" + prompt + "\"},\n" +
+                    "        {\"text\": \"" + userInput + "\"}\n" +
                     "      ]\n" +
                     "    }\n" +
                     "  ]\n" +
                     "}";
+
 
             try (OutputStream os = conn.getOutputStream()) {
                 byte[] input = jsonInputString.getBytes("utf-8");
                 os.write(input, 0, input.length);
             }
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
+            int responseCode = conn.getResponseCode();
+            InputStream is = (responseCode >= 200 && responseCode < 300)
+                    ? conn.getInputStream()
+                    : conn.getErrorStream();
+
+            BufferedReader br = new BufferedReader(new InputStreamReader(is, "utf-8"));
             StringBuilder response = new StringBuilder();
             String line;
 
@@ -43,12 +52,14 @@ public class GeminiApiService {
                 response.append(line.trim());
             }
 
-            // JSON cevaptan sadece yanıtı çıkar (geliştirmek istersen JSON parser kullanılabilir)
+            // Android log'a cevabı yaz
+            Log.d("GeminiAPI", "Cevap: " + response.toString());
+
             return response.toString();
 
         } catch (Exception e) {
             e.printStackTrace();
-            return "Bir hata oluştu: " + e.getMessage();
+            return "{\"error\": \"Bir hata oluştu: " + e.getMessage() + "\"}";
         }
     }
 }
