@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2121AD</color>
+    <color name="colorPrimaryVariant">#002855</color>
+    <color name="colorAccent">#3ABEFF</color>
+    <color name="buttonColor">#4255FF</color>
+    <color name="hintColor">#888888</color>
+    <color name="button_background">#8993B4</color> <!-- Daha canlı mavi -->
+    <color name="inputTextColor">#C14848</color> <!-- veya açık tema için #000000 -->
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="button_normal">#4285F9</color> <!-- ultramarine ton -->
+    <color name="button_pressed">#3367D6</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+
+</resources>

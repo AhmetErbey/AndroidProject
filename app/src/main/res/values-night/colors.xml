@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@android:color/darker_gray</color>
+    <color name="colorPrimaryVariant">#002855</color>
+    <color name="colorAccent">#3ABEFF</color>
+    <color name="button_background">#0066CC</color> <!-- Canlı mavi -->
+
+    <color name="inputTextColor">#C14848</color> <!-- veya açık tema için #000000 -->
+
+
+    <color name="button_normal">#4F8FFF</color>
+    <color name="button_pressed">#3A6FD0</color>
+    <color name="backgroundColor">#121212</color>
+    <color name="hintColor">#CCCCCC</color>
+    <color name="buttonColor">#2563eb</color> <!-- Blue-500 -->
+    <color name="textColor">#FFFFFF</color>
+
+
+
+
+
+</resources>

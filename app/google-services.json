@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1095436636729",
+    "project_id": "chatmatekids",
+    "storage_bucket": "chatmatekids.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095436636729:android:0d1ed4e8cbfd209285f3e8",
+        "android_client_info": {
+          "package_name": "com.chatmate.kids"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvd5HxjYxPDqs1H5i18aqpRu36hkeBDKI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
