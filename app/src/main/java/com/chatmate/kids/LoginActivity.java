@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.SharedPreferences;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -21,22 +20,10 @@ public class LoginActivity extends AppCompatActivity {
     private EditText emailEditText, passwordEditText;
     private Button loginButton;
     private TextView toRegisterTextView;
-    private SwitchCompat themeSwitch;
     private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
-        String theme = prefs.getString("theme", "light");
-
-        themeSwitch.setChecked(theme.equals("dark"));
-        themeSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putString("theme", isChecked ? "dark" : "light");
-            editor.apply();
-            recreate(); // Uygulama zaten açılışta theme'i uyguluyor
-        });
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -50,11 +37,15 @@ public class LoginActivity extends AppCompatActivity {
         passwordEditText = findViewById(R.id.password);
         loginButton = findViewById(R.id.loginButton);
         toRegisterTextView = findViewById(R.id.toRegister);
-        themeSwitch = findViewById(R.id.themeSwitch); // SwitchCompat XML’de tanımlı olmalı
+        toRegisterTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        // Switch başlangıç durumunu yükle
-        themeSwitch.setChecked(theme.equals("dark"));
-
+        loginButton.setOnClickListener(view -> loginUser());
     }
 
     private void loginUser() {
