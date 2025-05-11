@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dark_mode">Karanlık Mod</string>
+    <string name="language">Dil</string>
+    <string name="logout">Çıkış Yap</string>
+    <string name="settings">Ayarlar</string>
+    <string name="appearance_label">Görünüm</string>
+    <string name="language_label">Dil</string>
+    <string name="color_theme_label">Renk Teması</string>
+    <string name="type_message">Mesaj yaz</string>
+    <string name="app_name">Edu Chat</string>
+    <string name="hint_email">E-posta</string>
+    <string name="hint_password">Şifre</string>
+    <string name="login_button">Giriş Yap</string>
+    <string name="go_to_register">Hesabınız yok mu? Kayıt olun</string>
+    <string name="register_button">Kayıt Ol</string>
+    <string name="go_to_login">Zaten hesabınız var mı? Giriş yapın</string>
+
+    <string name="send">Gönder</string>
+    <string name="bg_desc">Uygulama arka plan görseli</string>
+    <string name="logo_desc">Uygulama logosu</string>
+
+    <string-array name="color_theme_options">
+        <item>Mavi</item>
+        <item>Yeşil</item>
+        <item>Turuncu</item>
+    </string-array>
+</resources>

@@ -8,9 +8,49 @@
         <item name="android:textColor">@color/textColor</item>
         <item name="android:textColorPrimary">@color/textColor</item>
         <item name="android:statusBarColor">@color/colorPrimaryVariant</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
         <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo_enter</item>
         <item name="android:windowSplashScreenBackground">@color/white</item>
 
+        </style>
+        <style name="Theme.ChatBotApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+            <item name="colorPrimary">@color/purple_500</item>
+            <item name="colorPrimaryVariant">@color/purple_700</item>
+            <item name="colorOnPrimary">@color/white</item>
+            <item name="android:windowBackground">@color/white</item>
+            <item name="android:textColor">@color/black</item>
+            <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+            <item name="android:textAppearanceLargePopupMenu">@style/BoldToolbarTitle</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+        </style>
 
-    </style>
+        <!-- 💡 Custom color themes -->
+        <style name="Theme.ChatBotApp.Blue" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+            <item name="colorPrimary">@color/blue_500</item>
+            <item name="colorPrimaryVariant">@color/blue_700</item>
+            <item name="colorSecondary">@color/blue_700</item>
+            <item name="android:statusBarColor">@color/blue_700</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+        </style>
+
+        <style name="Theme.ChatBotApp.Green" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+            <item name="colorPrimary">@color/green_500</item>
+            <item name="colorPrimaryVariant">@color/green_700</item>
+            <item name="colorSecondary">@color/green_700</item>
+            <item name="android:statusBarColor">@color/green_700</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+        </style>
+
+        <style name="Theme.ChatBotApp.Orange" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+            <item name="colorPrimary">@color/orange_500</item>
+            <item name="colorPrimaryVariant">@color/orange_700</item>
+            <item name="colorSecondary">@color/orange_700</item>
+            <item name="android:statusBarColor">@color/orange_700</item>
+            <item name="windowActionBar">false</item>
+            <item name="windowNoTitle">true</item>
+        </style>
 </resources>

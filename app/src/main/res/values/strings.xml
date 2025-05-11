@@ -1,4 +1,5 @@
 <resources>
+    <!-- Türkçe ve İngilizce çeviriler -->
     <string name="app_name">Edu Chat</string>
     <string name="hint_email">E-posta</string>
     <string name="hint_password">Şifre</string>
@@ -6,8 +7,42 @@
     <string name="go_to_register">Hesabınız yok mu? Kayıt olun</string>
     <string name="register_button">Kayıt Ol</string>
     <string name="go_to_login">Zaten hesabınız var mı? Giriş yapın</string>
-    <string name="dark_mode">Dark Mode</string>
+    <string name="dark_mode">Karanlık Mod</string>
     <string name="bg_desc">Uygulama arka plan görseli</string>
     <string name="logo_desc">Uygulama logosu</string>
+
+    <string name="settings">Ayarlar</string>
+    <string name="language">Dil</string>
+    <string name="logout">Çıkış Yap</string>
+    <string name="appearance_label">Görünüm</string>
+    <string name="language_label">Dil</string>
+    <string name="color_theme_label">Renk Teması</string>
+    <string name="send">Gönder</string>
+    <string name="type_message">Mesaj yazın</string>
+    <string name="about">Hakkında</string>
+    <string name="back_to_chat">Sohbete Dön</string>
+    
+    <!-- Yeni eklenen string kaynakları -->
+    <string name="theme">Tema</string>
+    <string name="select_theme">Tema Seç</string>
+    <string name="color_theme">Renk Teması</string>
+    <string name="select_color_theme">Renk Teması Seç</string>
+    <string name="select_language">Dil Seç</string>
+    <string name="english">English</string>
+    <string name="turkish">Türkçe</string>
+    
+    <!-- Tema modları -->
+    <string name="theme_system">Sistem</string>
+    <string name="theme_light">Açık</string>
+    <string name="theme_dark">Karanlık</string>
+    <string name="theme_mode">Tema Modu</string>
+    <string name="theme_mode_description">Sistem temasını takip et veya her zaman açık/karanlık tema kullan</string>
+
+
+    <string-array name="color_theme_options">
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Orange</item>
+    </string-array>
 
 </resources>

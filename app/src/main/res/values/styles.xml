@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="BoldToolbarTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomToolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">@style/BoldToolbarTitle</item>
+    </style>
+
+</resources>

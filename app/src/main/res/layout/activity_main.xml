@@ -1,59 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:background="#F1F1F1">
+    android:background="?android:attr/colorBackground">
 
-    <TextView
-        android:id="@+id/textViewTitle"
+    <!-- Modern Toolbar -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="EduChatBot"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#3F51B5"
-        android:gravity="center"
-        android:layout_marginBottom="24dp" />
+        android:layout_height="wrap_content">
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue_700" />
+            
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+                
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/settings"
+                android:tint="@android:color/white" />
+        </LinearLayout>
+    </FrameLayout>
 
-    <EditText
-        android:id="@+id/editTextUserInput"
+    <!-- İçerik -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:hint="Sorunuzu yazın..."
-        android:padding="12dp"
-        android:background="@android:drawable/editbox_background"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textSize="16sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/buttonSend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="💬 Yanıt Al"
-        android:backgroundTint="#3F51B5"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="16dp"
-        android:padding="12dp" />
-
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="16dp"
-        android:fillViewport="true">
-
-        <TextView
-            android:id="@+id/textViewResponse"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yanıt burada görünecek..."
-            android:textSize="16sp"
-            android:textColor="#000000"
-            android:padding="16dp"
-            android:lineSpacingExtra="4dp" />
-    </ScrollView>
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="?android:attr/colorBackgroundFloating"
+            android:layout_marginBottom="16dp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/colorPrimary"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp" />
+                    
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_message"
+                    android:textSize="14sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:alpha="0.7"
+                    android:layout_marginBottom="8dp" />
+                    
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/type_message"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="?android:attr/colorPrimary"
+                    app:hintTextColor="?android:attr/colorPrimary">
+                    
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextUserInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/send"
+                    app:icon="@android:drawable/ic_menu_send"
+                    android:layout_marginTop="16dp"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="?android:attr/colorBackgroundFloating">
+            
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textViewResponse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:lineSpacingExtra="4dp" />
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,46 @@
+<resources>
+    <!-- English translations -->
+    <string name="app_name">Edu Chat</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="go_to_register">Don\'t have an account? Register</string>
+    <string name="register_button">Register</string>
+    <string name="go_to_login">Already have an account? Login</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="bg_desc">App background image</string>
+    <string name="logo_desc">App logo</string>
+
+    <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="logout">Logout</string>
+    <string name="appearance_label">Appearance</string>
+    <string name="language_label">Language</string>
+    <string name="color_theme_label">Color Theme</string>
+    <string name="send">Send</string>
+    <string name="type_message">Type a message</string>
+    <string name="about">About</string>
+    <string name="back_to_chat">Back to Chat</string>
+    
+    <!-- New string resources -->
+    <string name="theme">Theme</string>
+    <string name="select_theme">Select Theme</string>
+    <string name="color_theme">Color Theme</string>
+    <string name="select_color_theme">Select Color Theme</string>
+    <string name="select_language">Select Language</string>
+    <string name="english">English</string>
+    <string name="turkish">Turkish</string>
+    
+    <!-- Theme modes -->
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_mode">Theme Mode</string>
+    <string name="theme_mode_description">Follow system theme or always use light/dark theme</string>
+
+    <string-array name="color_theme_options">
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Orange</item>
+    </string-array>
+</resources>
